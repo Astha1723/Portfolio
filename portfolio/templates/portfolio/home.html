@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astha Singh | Portfolio</title>
+
+<link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+<!-- Floating Shapes -->
+<div class="floating-shapes">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#extra">Certificates & Languages</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>ASTHA SINGH</h1>
+    <h2><span id="typing"></span></h2>
+    <p>Haridwar, Uttarakhand, India</p>
+
+    <p>📞 <a href="tel:+918791432341">+91-8791432341</a></p>
+    <p>📧 <a href="mailto:asthasingh2317@gmail.com">asthasingh2317@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/astha-singh-950452361" target="_blank">LinkedIn Profile</a></p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>Career Objective</h3>
+      <p>
+        To obtain a challenging position in a reputed IT organization where I can
+        utilize my technical and analytical skills in software development and
+        contribute effectively to organizational success while enhancing my
+        professional growth.
+      </p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Education</h3>
+      <p><strong>MCA</strong> | Banasthali Vidyapeeth (Expected July 2026)</p>
+      <p><strong>B.Sc Mathematics</strong> | Banasthali Vidyapeeth (2024)</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>Technical Skills</h3>
+      <div class="skill-bar">Python</div>
+      <div class="skill-bar">Java</div>
+      <div class="skill-bar">C++</div>
+      <div class="skill-bar">HTML</div>
+      <div class="skill-bar">CSS</div>
+      <div class="skill-bar">JavaScript</div>
+      <div class="skill-bar">MySQL</div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <div class="skill-bar">Problem Solving</div>
+      <div class="skill-bar">Teamwork</div>
+      <div class="skill-bar">Adaptability</div>
+      <div class="skill-bar">Time Management</div>
+      <div class="skill-bar">Leadership</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <h3>Data Visualization Tool</h3>
+      <p><strong>Tech:</strong> Python, Pandas, Matplotlib</p>
+      <p>
+        Developed an interactive data visualization tool that allows users to upload
+        CSV/Excel files and generate dynamic charts such as bar graphs, pie charts,
+        and line graphs. Implemented real-time filtering for better data analysis.
+      </p>
+      <p>
+        Focused on clean UI design and user-friendly experience to improve usability.
+      </p>
+    </div>
+
+    <div class="skill-card">
+      <h3>School Management System</h3>
+      <p><strong>Tech:</strong> Java, MySQL</p>
+      <p>
+        Designed and developed a CRUD-based school management system with secure
+        login authentication for admin, teachers, and students. Integrated MySQL
+        database for managing student records, attendance, and academic results.
+      </p>
+      <p>
+        Implemented role-based access control and ensured efficient record handling.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXTRA -->
+<section id="extra">
+  <h2 class="section-title">Certificates & Languages</h2>
+
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>Certificates</h3>
+      <div class="skill-bar">Web Development - Internshala (2025)</div>
+      <div class="skill-bar">CCNA - Cisco Networking Academy</div>
+      <div class="skill-bar">HR Life Course - Presentation & Job Writing</div>
+      <div class="skill-bar">Full Stack Developer Roadmap</div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Languages</h3>
+      <div class="skill-bar">English</div>
+      <div class="skill-bar">Hindi</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p class="contact-subtitle">Please fill this form properly</p>
+
+    <div class="contact-card">
+        <form>
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Your Message *</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+
+<!-- Typed JS -->
+<script>
+new Typed('#typing', {
+  strings: [
+    "Aspiring Software Developer",
+    "Python Enthusiast",
+    "Web Developer"
+  ],
+  typeSpeed: 60,
+  backSpeed: 40,
+  loop: true
+});
+</script>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    <button type="submit">Send</button>
+</form>
+
+
+</body>
+</html>
+<footer class="footer">
+    © 2026 Astha Singh. Python & Web Development Portfolio | Designed for Maximum Impact
+</footer>
