@@ -20,7 +20,7 @@ class Project(models.Model):
         return self.title
 
 
-class Contact(models.Model):   # 👈 SAME LEVEL
+class Contact(models.Model):   # 👈 SAME LEVEL 
     full_name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
