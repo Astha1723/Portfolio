@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail
+<<<<<<< HEAD
 from .models import Contact   # ✅ ADD THIS
+=======
+from .models import Contact   
+>>>>>>> 0acc1b6f495685600b34ac4a7f53f90d0435f851
 
 def home(request):
     form = ContactForm()
@@ -20,7 +24,11 @@ def home(request):
                 ["asthasingh2317@gmail.com"],
             )
 
+<<<<<<< HEAD
             # ✅ SAVE TO DATABASE
+=======
+    
+>>>>>>> 0acc1b6f495685600b34ac4a7f53f90d0435f851
             Contact.objects.create(
                 full_name=name,
                 email=email,
@@ -29,4 +37,8 @@ def home(request):
 
             form = ContactForm()
 
+<<<<<<< HEAD
     return render(request, "portfolio/home.html", {"form": form})
+=======
+    return render(request, "portfolio/home.html", {"form": form})
+>>>>>>> 0acc1b6f495685600b34ac4a7f53f90d0435f851
