@@ -154,20 +154,22 @@
     <p class="contact-subtitle">Please fill this form properly</p>
 
     <div class="contact-card">
-        <form>
+        <form method="POST">
+            {% csrf_token %}
+
             <div class="form-group">
                 <label>Full Name *</label>
-                <input type="text" required>
+                <input type="text" name="name" required>
             </div>
 
             <div class="form-group">
                 <label>Email Address *</label>
-                <input type="email" required>
+                <input type="email" name="email" required>
             </div>
 
             <div class="form-group">
                 <label>Your Message *</label>
-                <textarea rows="4" required></textarea>
+                <textarea name="message" rows="4" required></textarea>
             </div>
 
             <button type="submit" class="contact-btn">Submit</button>
@@ -190,14 +192,6 @@ new Typed('#typing', {
   loop: true
 });
 </script>
-
-<form method="POST">
-    {% csrf_token %}
-    
-    {{ form.as_p }}
-
-    <button type="submit">Send</button>
-</form>
 
 
 </body>
