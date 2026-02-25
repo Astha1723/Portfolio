@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail
+from .models import Contact   
 
 def home(request):
     form = ContactForm()
@@ -16,7 +17,16 @@ def home(request):
                 f"Message from {name}",
                 message,
                 email,
-                ["asthasingh2317@gmail.com"],  # your email
+                ["asthasingh2317@gmail.com"],
             )
 
-    return render(request, "portfolio/home.html")
+    
+            Contact.objects.create(
+                full_name=name,
+                email=email,
+                message=message
+            )
+
+            form = ContactForm()
+
+    return render(request, "portfolio/home.html", {"form": form})
